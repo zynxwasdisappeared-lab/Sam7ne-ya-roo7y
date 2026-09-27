@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+  <title>حقك عليا سامحيني ❤️</title>
+  
+  <!-- SEO & Social Sharing -->
+  <meta name="description" content="رسالة اعتذار رومانسية من كل قلبي.. حقك عليا وسامحيني يا أغلى ما عندي.">
+  <meta name="theme-color" content="#4c0519">
+
+  <!-- Google Fonts: Cairo & Tajawal -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;700;800;900&family=Tajawal:wght@300;400;500;700&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <!-- Canvas for floating particles (hearts, sparkles) -->
+  <canvas id="particles-canvas"></canvas>
+
+  <!-- Ambient Glowing Orbs Background -->
+  <div class="ambient-glow orb-1"></div>
+  <div class="ambient-glow orb-2"></div>
+  <div class="ambient-glow orb-3"></div>
+
+  <!-- Top Bar (Clean Brand Badge) -->
+  <header class="top-bar">
+    <div class="brand-badge">
+      <span class="heart-pulse">❤️</span>
+      <span class="brand-text">لكِ وحدكِ يا حبيبتي</span>
+    </div>
+  </header>
+
+  <!-- Main Container -->
+  <main class="app-container">
+    
+    <!-- ============================================== -->
+    <!-- 1. LANDING / QUESTION SCREEN                   -->
+    <!-- ============================================== -->
+    <section id="question-screen" class="view-screen active-screen">
+      <div class="glass-card question-card">
+        <div class="cute-avatar-container">
+          <div class="avatar-glow"></div>
+          <div class="avatar-emoji" id="avatar-emoji">🥺</div>
+          <div class="floating-mini-hearts">
+            <span class="mini-heart h1">💖</span>
+            <span class="mini-heart h2">✨</span>
+            <span class="mini-heart h3">🌸</span>
+          </div>
+        </div>
+
+        <h1 class="romantic-question" id="main-question">
+          بتحبيني؟
+        </h1>
+        
+        <p class="question-subtitle">
+          عندي سؤال صغير من قلبي لقلبك.. ومستني إجابتك بصراحة 💕
+        </p>
+
+        <!-- Buttons Area -->
+        <div class="buttons-playground" id="playground">
+          <!-- "Yes" Button -->
+          <button id="btn-yes" class="btn btn-yes" aria-label="نعم أحبك">
+            <span class="btn-text">أه بحبك ❤️</span>
+            <span class="btn-shine"></span>
+          </button>
+
+          <!-- "No" Button (Dodges touch & mouse) -->
+          <button id="btn-no" class="btn btn-no" aria-label="لا">
+            <span class="btn-no-text" id="no-text">لأ 🙈</span>
+          </button>
+        </div>
+
+        <div class="playful-hint" id="dodge-hint">
+          (جربي تدوسي على "لأ" لو شاطرة.. بس مفيش هروب من حبي ليكي 😉)
+        </div>
+      </div>
+    </section>
+
+
+    <!-- ============================================== -->
+    <!-- 2. APOLOGY MESSAGE SCREEN                      -->
+    <!-- ============================================== -->
+    <section id="apology-screen" class="view-screen hidden-screen">
+      <div class="glass-card apology-card">
+        <!-- Letter Decorative Header -->
+        <div class="letter-stamp">
+          <span class="stamp-heart">💌</span>
+          <span class="stamp-label">رسالة من أعماق القلب</span>
+        </div>
+
+        <!-- Envelope / Ribbon Accent -->
+        <div class="card-ornament">
+          <div class="ornament-line"></div>
+          <div class="ornament-gem">✨</div>
+          <div class="ornament-line"></div>
+        </div>
+
+        <!-- Greeting -->
+        <div class="letter-greeting" id="letter-greeting">
+          إلى حبيبتي ونور عيني وعمري كله.. منه 🌹
+        </div>
+
+        <!-- Typewriter Container -->
+        <div class="letter-body-wrapper">
+          <div id="typewriter-text" class="typewriter-text" aria-live="polite"></div>
+          <span class="typing-cursor" id="typing-cursor"></span>
+        </div>
+
+        <!-- Final Reveal Block (Revealed after typing finishes) -->
+        <div id="final-reveal" class="final-reveal hidden-fade">
+          <div class="golden-separator"></div>
+
+          <h2 class="closing-plea" id="closing-plea">
+            إنتي مسامحاني؟ 🥺❤️
+          </h2>
+
+          <p class="closing-sub">
+            قلبي مستني كلمتك اللي هترد فيا الروح..
+          </p>
+
+          <!-- Forgiveness Response Buttons -->
+          <div class="reconciliation-actions" id="forgive-playground">
+            <!-- Direct WhatsApp Button -->
+            <button id="btn-forgive-wa" class="btn btn-whatsapp" aria-label="مسامحاك ياخالودي">
+              <svg class="wa-icon" viewBox="0 0 24 24" width="24" height="24" fill="currentColor">
+                <path d="M12.04 2C6.58 2 2.13 6.45 2.13 11.91C2.13 13.66 2.59 15.36 3.45 16.86L2.05 22L7.3 20.62C8.75 21.41 10.38 21.83 12.04 21.83C17.5 21.83 21.95 17.38 21.95 11.92C21.95 9.27 20.92 6.78 19.05 4.91C17.18 3.03 14.69 2 12.04 2M12.05 3.67C14.25 3.67 16.31 4.53 17.87 6.09C19.42 7.65 20.28 9.72 20.28 11.92C20.28 16.46 16.58 20.15 12.04 20.15C10.56 20.15 9.11 19.76 7.85 19L7.55 18.83L4.43 19.65L5.26 16.61L5.06 16.29C4.24 14.99 3.8 13.47 3.8 11.91C3.81 7.37 7.5 3.67 12.05 3.67M9.11 7.15C8.95 7.15 8.7 7.21 8.48 7.45C8.26 7.69 7.65 8.26 7.65 9.42C7.65 10.58 8.5 11.7 8.61 11.86C8.73 12.02 10.25 14.37 12.61 15.39C14.57 16.23 14.97 16.07 15.39 16.03C15.82 15.99 16.78 15.46 16.98 14.9C17.18 14.34 17.18 13.86 17.12 13.76C17.06 13.66 16.9 13.6 16.65 13.48C16.41 13.36 15.21 12.77 14.99 12.69C14.77 12.61 14.61 12.57 14.45 12.81C14.29 13.05 13.82 13.6 13.68 13.76C13.54 13.92 13.4 13.94 13.16 13.82C12.92 13.7 11.89 13.37 10.68 12.29C9.74 11.45 9.11 10.42 8.99 10.22C8.87 10.02 8.97 9.91 9.09 9.79C9.2 9.68 9.34 9.5 9.46 9.36C9.58 9.22 9.62 9.12 9.7 8.96C9.78 8.8 9.74 8.66 9.68 8.54C9.62 8.42 9.16 7.29 8.97 6.83C8.78 6.38 8.6 6.44 8.46 6.43C8.33 6.43 8.17 6.43 8.01 6.43"/>
+              </svg>
+              <span>مسامحاك ياخالودي ❤️</span>
+              <span class="btn-shine"></span>
+            </button>
+
+            <!-- Playful dodging "No" Button for forgiveness -->
+            <button id="btn-no-forgive" class="btn btn-no" aria-label="لأ لسه زعلانة">
+              <span id="no-forgive-text">لأ لسه زعلانة 🙈</span>
+            </button>
+          </div>
+
+          <div class="playful-hint" id="forgive-dodge-hint" style="margin-top: 1.25rem;">
+            (مفيش زرار "لأ" هيشتغل.. مفيش غير إنك تسامحي خالودي 😉❤️)
+          </div>
+        </div>
+
+        <!-- Celebration Modal / Banner once she clicks Forgive -->
+        <div id="celebration-box" class="celebration-box hidden-fade">
+          <div class="celebration-stars">✨ 💖 💍 🌹 🕊️</div>
+          <h3 class="celebration-title">يا أحن وأطيب قلب في الدنيا يا منه!</h3>
+          <p class="celebration-msg">
+            وعد من خالد ليكي.. هفضل دايمًا شايلك جوه قلبي وعيوني، ومقدرش أعيش من غيرك لحظة واحدة بجد، ومش هسمح لأي حاجة في الدنيا تزعل ضحكتك دي تاني أبداً. بحبك لأخر نفس في عمري! ❤️💍
+          </p>
+          <div class="couple-tag">خالد & منه للأبد ♾️❤️</div>
+        </div>
+
+      </div>
+    </section>
+
+  </main>
+
+  <!-- Background Music Audio Element -->
+  <audio id="bg-audio" loop preload="auto">
+    <source src="background-music.mp3" type="audio/mpeg">
+    <source src="Y2Mate.is%20-%20Dolly%20Shahine%20-%20Haak%20Aalya%20_%20%20%20-%20%20.mp3" type="audio/mpeg">
+  </audio>
+
+  <script src="script.js"></script>
+</body>
+</html>
